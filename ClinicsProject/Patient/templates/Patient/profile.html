@@ -1,0 +1,45 @@
+<img src="/media/{{ request.user.patient.file }}" ,width=5, hight=5>
+<form method="post" >
+    {% csrf_token %}
+    <h2>welcome</h2>
+    <table>
+        <tr>
+            <th>First name</th>
+            <td>{{request.user.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last name</th>
+            <td>{{request.user.lastname}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{request.user.email}}</td>
+         </tr>
+        <tr>
+            <th>DOB</th>
+            <td>{{request.user.patient.dob}}</td>
+         </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{request.user.patient.address}}</td>
+        </tr>
+        <tr>
+            <th>Nationality</th>
+            <td>{{request.user.patient.nationality}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{request.user.patient.gender}}</td>
+        </tr>
+        <tr>
+            <th>Phone No</th>
+            <td>{{request.user.phone_no}}</td>
+        </tr>
+    </table>
+</form>
+
+<a href={%url 'patient_update'%}>Update Profile</a>
+<br/>
+<br/>
+<a href={%url 'home'%}>home page</a>
+

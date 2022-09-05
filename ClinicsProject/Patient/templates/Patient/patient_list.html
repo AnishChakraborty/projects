@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+</head>
+<body>
+
+    <h1>Patients</h1>
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Nmae</th>
+        <th>Age</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>Nationality</th>
+        <th>Address</th>
+        <th>Addhar_id</th>
+      </thead>
+      {%for patient in patient_list%}
+      <tr>
+          <td>{{patient.id}}</td>
+          <td>{{patient.firstname}}</td>
+          <td>{{patient.lastname}}</td>
+          <td>{{patient.age}}</td>
+          <td>{{patient.dob}}</td>
+          <td>{{patient.gender}}</td>
+          <td>{{patient.nationality}}</td>
+          <td>{{patient.address}}</td>
+          <td>{{patient.addhar_id}}</td>
+          <td><a href="/update/{{patient.id}}">Update</a></td>
+          {%csrf_token%}
+
+      </tr>
+    {%endfor%}
+  </table>
+  </body>
+</html>

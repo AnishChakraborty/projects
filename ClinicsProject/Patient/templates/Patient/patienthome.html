@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h2>HOME PAGE</h2>
+<a href={%url 'patient_profile'%}>Profile</a>
+<br/>
+<br/>
+<a href={%url 'patient_changepassword'%}>Change Password</a>
+<br/>
+<br/>
+<a href={%url 'doctors'%}>see doctors</a>
+<br/>
+<br/>
+<a href={%url 'patient_appointmentlist' request.user.id%}>Apoointment list</a>
+<br/>
+<br/>
+<a href={%url 'patientlogout'%}>Log out</a>
+
+</body>
+</html>

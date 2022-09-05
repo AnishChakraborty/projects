@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Details</title>
+</head>
+<img src="/media/{{ user.patient.file }}" ,width=5, hight=5>
+
+<body>
+    <h2>Patient Details</h2>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last name</th>
+            <td>{{user.lastname}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{user.email}}</td>
+         </tr>
+        <tr>
+            <th>DOB</th>
+            <td>{{user.patient.dob}}</td>
+         </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{user.patient.address}}</td>
+        </tr>
+        <tr>
+            <th>Nationality</th>
+            <td>{{user.patient.nationality}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{user.patient.gender}}</td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td>{{user.patient.age}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+<a href={%url 'doctor_home'%}>home page</a>

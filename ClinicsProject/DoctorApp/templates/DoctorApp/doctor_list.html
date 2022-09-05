@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors</title>
+</head>
+<body>
+    <h1>Doctor</h1>
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Nmae</th>
+        <th>Age</th>
+        <th>DOB</th>
+        <th>Specilityr</th>
+        <th>phone no</th>
+        <th>Experience</th>
+        <th>fees</th>
+      </thead>
+      {%for doctor in doctor_list%}
+      <tr>
+          <td>{{doctor.id}}</td>
+          <td>{{doctor.firstname}}</td>
+          <td>{{doctor.lastname}}</td>
+          <td>{{doctor.age}}</td>
+          <td>{{doctor.dob}}</td>
+          <td>{{doctor.specility}}</td>
+          <td>{{doctor.phone_no}}</td>
+          <td>{{doctor.experience}}</td>
+          <td>{{doctor.fee}}</td>
+      </tr>
+    {%endfor%}
+  </table>
+  </body>
+</html>

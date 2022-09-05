@@ -1,0 +1,53 @@
+<img src="/media/{{ request.user.doctor.file }}" ,width=5, hight=5>
+{% load calculate_rating %}
+
+<form method="post" >
+    {% csrf_token %}
+    <h2>welcome</h2>
+    <table>
+        <tr>
+            <th>First name</th>
+            <td>{{request.user.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last name</th>
+            <td>{{request.user.lastname}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{request.user.email}}</td>
+         </tr>
+        <tr>
+            <th>FEES</th>
+            <td>{{request.user.doctor.fees}}</td>
+         </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{request.user.doctor.address}}</td>
+        </tr>
+        <tr>
+            <th>Specility</th>
+            <td>{{request.user.doctor.specility}}</td>
+        </tr>
+        <tr>
+            <th>Experience</th>
+            <td>{{request.user.doctor.experience}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{request.user.doctor.gender}}</td>
+        </tr>
+        <tr>
+            <th>Phone No</th>
+            <td>{{request.user.phone_no}}</td>
+        </tr>
+           <tr>
+            <th>Rating</th>
+            <td>{{user|rating}}</td>
+        </tr>
+    </table>
+</form>
+<a href={%url 'update'%}>Update Profile</a>
+<br/>
+<br/>
+<a href={%url 'doctor_home'%}>home page</a>

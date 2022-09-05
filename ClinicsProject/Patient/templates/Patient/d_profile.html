@@ -1,0 +1,53 @@
+{% load calculate_rating %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Details</title>
+</head>
+<img src="/media/{{ user.doctor.file }}" ,width=5, hight=5>
+
+<body>
+    <h2>Doctor Details</h2>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+            <th>Last name</th>
+            <td>{{user.lastname}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr>
+            <th>age</th>
+            <td>{{user.doctor.age}}</td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>{{user.doctor.address}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{user.doctor.gender}}</td>
+        </tr>
+        <tr>
+            <th>Specility</th>
+            <td>{{user.doctor.specility}}</td>
+        </tr>
+         <tr>
+            <th>raiting</th>
+            <td>{{user | rating }}</td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
+<br/>
+<a href={%url 'home'%}>home page</a>
